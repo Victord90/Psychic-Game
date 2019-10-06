@@ -49,7 +49,7 @@ function setup() {
             }
             if ( maxGuess === 0) {
                 losses++;
-                wrongGif();
+                loserGif();
                 setup();
 
             }
@@ -66,10 +66,17 @@ function setup() {
         function wrongGif() {
             document.getElementById("wrong-gif").src= "https://media.giphy.com/media/TPl5N4Ci49ZQY/giphy.gif";
             document.getElementById("right-gif").src= "";
+            document.getElementById("loser-gif").src= "";
         } {
         function rightGif() {
             document.getElementById("right-gif").src= "https://media0.giphy.com/media/hTerI4FpPtJg4/giphy.gif";
             document.getElementById("wrong-gif").src= "";
+            document.getElementById("loser-gif").src= "";
+        }
+        function loserGif () {
+            document.getElementById("loser-gif").src= "https://media2.giphy.com/media/ceeN6U57leAhi/giphy.gif";
+            document.getElementById("wrong-gif").src= "";
+            document.getElementById("right-gif").src= "";
         }
     }
 
