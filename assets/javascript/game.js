@@ -32,6 +32,7 @@ function setup() {
             console.log(userGuess);
             if ( userGuess === computerGuess){
                 wins++;
+                rightGif();
                 setup();      
             }else{
                 maxGuess--;
@@ -40,7 +41,7 @@ function setup() {
             if ( maxGuess === 0) {
                 losses++;
                 wrongGif();
-            
+                setup();
 
             }
             
@@ -54,7 +55,10 @@ function setup() {
         }
 
         function wrongGif() {
-            document.getElementById("wrong-gif").innerHTML = img=("https://media.giphy.com/media/TPl5N4Ci49ZQY/giphy.gif")
+            document.getElementById("wrong-gif").src= "https://media.giphy.com/media/TPl5N4Ci49ZQY/giphy.gif";
+        }
+        function rightGif() {
+            document.getElementById("right-gif").src= "https://media0.giphy.com/media/hTerI4FpPtJg4/giphy.gif";
         }
 
-setup();
+setup()
